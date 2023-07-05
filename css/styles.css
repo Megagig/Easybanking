@@ -165,3 +165,72 @@ main img {
   color: var(--Lime_Green);
   font-weight: 300;
 }
+/* Foooter styles */
+/* footer {
+  background-color: var(--Dark_Blue);
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+footer .links {
+  display: flex;
+  gap: 5rem;
+} */
+
+/* Footer styles */
+#end {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.company-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.upper-link {
+  margin-bottom: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .company-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+}
+
+footer .company-logo .socials {
+  padding: 1rem 0 0 6rem;
+}
