@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+  --Dark_Blue: hsl(233, 26%, 24%);
+  --Lime_Green: hsl(136, 65%, 51%);
+  --Bright_Cyan: hsl(192, 70%, 51%);
+  --Grayish_Blue: hsl(233, 8%, 62%);
+  --Light_Grayish_Blue: hsl(220, 16%, 96%);
+  --Very_Light_Gray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Light_Red: red;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--White);
+  padding: 20px 30px;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to right, var(--Lime_Green), var(--Bright_Cyan));
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: var(--Light_Grayish_Blue);
+}
+
+main img {
+  width: 40%;
+}
+
+.main-content {
+  width: 45%;
+}
+
+.main-content h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+#About {
+  padding: 50px;
+}
+#About .header {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+#About .header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+#About .body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+#About .body p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+#About .body .card {
+  background-color: var(--White);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#About .card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+
+#Articles {
+  padding: 50px;
+}
+
+#Articles .upper {
+  width: 60%;
+  margin-bottom: 2rem;
+}
+
+#Articles .upper h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+#Articles .down {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.down .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#Articles .down .card {
+  background-color: var(--White);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.down .card h4 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+}
+
+.down .card p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.down .card a {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--Dark_Blue);
+  text-decoration: underline;
+}
+.down .card a:hover {
+  color: var(--Lime_Green);
+  font-weight: 300;
+}
+/* Foooter styles */
+/* footer {
+  background-color: var(--Dark_Blue);
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+footer .links {
+  display: flex;
+  gap: 5rem;
+} */
+
+/* Footer styles */
+#end {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.company-logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.upper-link {
+  margin-bottom: 10px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .company-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .socials a {
+    font-size: 16px;
+  }
+
+  .links a {
+    font-size: 12px;
+  }
+}
+
+footer .company-logo .socials {
+  padding: 1rem 0 0 6rem;
+}
