@@ -38,6 +38,7 @@ a {
 nav a {
   color: var(--Grayish_Blue);
 }
+
 ul {
   display: flex;
   list-style: none;
@@ -115,7 +116,7 @@ main img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#About .card h3 {
+#About .body .card h3 {
   font-size: 1rem;
   font-weight: 500;
   margin: 0.8rem 0;
@@ -130,18 +131,6 @@ main img {
   margin-bottom: 2rem;
 }
 
-/* #Articles .upper h2 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-} */
-
-/* #Articles .down {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-} */
-
 .down .card img {
   width: 100%;
   height: 200px;
@@ -151,11 +140,11 @@ main img {
 
 #Articles .down .card {
   background-color: var(--White);
-
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.card-content {
+
+.down .card-content {
   padding: 20px;
 }
 
@@ -182,21 +171,6 @@ main img {
   color: var(--Lime_Green);
   font-weight: 300;
 }
-
-/* Foooter styles */
-
-/* footer {
-  background-color: var(--Dark_Blue);
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 15px;
-}
-footer .links {
-  display: flex;
-  gap: 5rem;
-} */
 
 /* Footer styles */
 #end {
@@ -233,27 +207,33 @@ footer .links {
 .upper-link {
   margin-bottom: 10px;
 }
+
 /* Responsive styles for smaller screens */
 @media screen and (max-width: 992px) {
   .main-content h1 {
     font-size: 2rem;
   }
+
   .main-content p {
     font-size: 1rem;
   }
+
   #About .header h2,
   #Articles .upper h2 {
     font-size: 1.5rem;
   }
+
   #About .header p {
     font-size: 0.8rem;
   }
+
   #About .body,
   #Articles .down {
     gap: 1rem;
   }
+
   #About .body .card,
-  .card-content {
+  .down .card-content {
     padding: 10px;
   }
 }
@@ -262,31 +242,21 @@ footer .links {
   nav button {
     display: none;
   }
+
   .main-content h1 {
     font-size: 1.5rem;
   }
+
   .main-content p {
     font-size: 0.8rem;
   }
+
   #About .header {
     width: 65%;
   }
+
   #About .body,
   #Articles .down {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 576px) {
-  nav ul {
-    /* flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--Dark_Blue);
-    transition: all 0.5s ease; */
   }
 }
