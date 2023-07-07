@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 :root {
   --Dark_Blue: hsl(233, 26%, 24%);
   --Lime_Green: hsl(136, 65%, 51%);
@@ -15,6 +17,7 @@
   --White: hsl(0, 0%, 100%);
   --Light_Red: red;
 }
+
 html,
 body {
   scroll-behavior: smooth;
@@ -27,14 +30,21 @@ nav {
   background-color: var(--White);
   padding: 20px 30px;
 }
+
 a {
   text-decoration: none;
 }
+
+nav a {
+  color: var(--Grayish_Blue);
+}
+
 ul {
   display: flex;
   list-style: none;
   gap: 2rem;
 }
+
 button {
   color: white;
   padding: 10px 20px;
@@ -74,17 +84,21 @@ main img {
 #About {
   padding: 50px;
 }
+
 #About .header {
-  width: 60%;
+  width: 50%;
   margin-bottom: 2rem;
 }
-#About .header h2 {
-  font-size: 2.5rem;
+
+#About .header h2,
+#Articles .upper h2 {
+  font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
-#About .body {
+#About .body,
+#Articles .down {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -102,7 +116,7 @@ main img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#About .card h3 {
+#About .body .card h3 {
   font-size: 1rem;
   font-weight: 500;
   margin: 0.8rem 0;
@@ -117,18 +131,6 @@ main img {
   margin-bottom: 2rem;
 }
 
-#Articles .upper h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-}
-
-#Articles .down {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
 .down .card img {
   width: 100%;
   height: 200px;
@@ -138,9 +140,12 @@ main img {
 
 #Articles .down .card {
   background-color: var(--White);
-  padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.down .card-content {
+  padding: 20px;
 }
 
 .down .card h4 {
@@ -161,23 +166,11 @@ main img {
   color: var(--Dark_Blue);
   text-decoration: underline;
 }
+
 .down .card a:hover {
   color: var(--Lime_Green);
   font-weight: 300;
 }
-/* Foooter styles */
-/* footer {
-  background-color: var(--Dark_Blue);
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 15px;
-}
-footer .links {
-  display: flex;
-  gap: 5rem;
-} */
 
 /* Footer styles */
 #end {
@@ -191,8 +184,8 @@ footer .links {
 }
 
 .company-logo img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  filter: invert(1);
 }
 
 .socials a {
@@ -216,21 +209,54 @@ footer .links {
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 600px) {
-  .company-logo img {
-    width: 80px;
-    height: 80px;
+@media screen and (max-width: 992px) {
+  .main-content h1 {
+    font-size: 2rem;
   }
 
-  .socials a {
-    font-size: 16px;
+  .main-content p {
+    font-size: 1rem;
   }
 
-  .links a {
-    font-size: 12px;
+  #About .header h2,
+  #Articles .upper h2 {
+    font-size: 1.5rem;
+  }
+
+  #About .header p {
+    font-size: 0.8rem;
+  }
+
+  #About .body,
+  #Articles .down {
+    gap: 1rem;
+  }
+
+  #About .body .card,
+  .down .card-content {
+    padding: 10px;
   }
 }
 
-footer .company-logo .socials {
-  padding: 1rem 0 0 6rem;
+@media screen and (max-width: 768px) {
+  nav button {
+    display: none;
+  }
+
+  .main-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-content p {
+    font-size: 0.8rem;
+  }
+
+  #About .header {
+    width: 65%;
+  }
+
+  #About .body,
+  #Articles .down {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
